@@ -14,8 +14,6 @@ export class CharactersApiService {
   BASE_URL = `http://gateway.marvel.com/v1/public/`;
 
   URL_CHARACTERS = this.BASE_URL + `characters?ts=1&limit=100&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
-  URL_COMICS = this.BASE_URL + `comics?ts=1&limit=100&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
-  URL_TV_SHOWS = this.BASE_URL + `tv-shows?ts=1&limit=100&apikey=${this.PUBLIC_KEY}&hash=${this.HASH}`;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -24,13 +22,4 @@ export class CharactersApiService {
     .pipe(map((data: any) => data.data.results));
   }
 
-  getAllComics(): Observable<any> {
-    return this.httpClient.get<any>(this.URL_COMICS)
-    .pipe(map((data: any) => data.data.results));
-  }
-
-  getAllSeries(): Observable<any> {
-    return this.httpClient.get<any>(this.URL_TV_SHOWS)
-    .pipe(map((data: any) => data.data.results));
-  }
 }

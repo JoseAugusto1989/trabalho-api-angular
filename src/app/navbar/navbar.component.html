@@ -5,10 +5,10 @@
       [opened]="(isHandset$ | async) === false">
     <mat-toolbar color="primary">Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Characters</a>
-      <a mat-list-item href="#">Comics</a>
-      <a mat-list-item href="#">Events</a>
-      <a mat-list-item href="#">Series</a>
+      <a mat-list-item routerLink="/characters/character">Characters</a>
+      <a mat-list-item routerLink="/characters/comics">Comics</a>
+      <a mat-list-item [routerLink]="['./characters/events']">Events</a>
+      <a mat-list-item routerLink="../characters/series">Series</a>
       <a mat-list-item href="#">Stories</a>
     </mat-nav-list>
   </mat-sidenav>

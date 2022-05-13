@@ -17,13 +17,21 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { ComicsComponent } from './characters/comics/comics.component';
+import { EventsComponent } from './characters/events/events.component';
+import { SerieComponent } from './characters/series/serie.component';
+import { StoriesComponent } from './characters/stories/stories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CharacterComponent,
-    CharactersComponent
+    CharactersComponent,
+    ComicsComponent,
+    EventsComponent,
+    SerieComponent,
+    StoriesComponent,
   ],
   imports: [
     BrowserModule,
