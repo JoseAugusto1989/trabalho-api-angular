@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NavbarComponent } from './navbar/navbar.component';
+import { HomeComponent } from './home/home.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
@@ -17,20 +17,28 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { ComicsComponent } from './characters/comics/comics.component';
-import { EventsComponent } from './characters/events/events.component';
-import { SerieComponent } from './characters/series/serie.component';
-import { StoriesComponent } from './characters/stories/stories.component';
+import { ComicComponent } from './comics/comic/comic.component';
+import { ComicsComponent } from './comics/comics.component';
+import { EventComponent } from './events/event/event.component';
+import { EventsComponent } from './events/events.component';
+import { SerieComponent } from './series/serie/serie.component';
+import { SeriesComponent } from './series/series.component';
+import { StorieComponent } from './stories/storie/storie.component';
+import { StoriesComponent } from './stories/stories.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
+    HomeComponent,
     CharacterComponent,
     CharactersComponent,
+    ComicComponent,
     ComicsComponent,
+    EventComponent,
     EventsComponent,
     SerieComponent,
+    SeriesComponent,
+    StorieComponent,
     StoriesComponent,
   ],
   imports: [
@@ -46,9 +54,9 @@ import { StoriesComponent } from './characters/stories/stories.component';
     HttpClientModule,
     FlexLayoutModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

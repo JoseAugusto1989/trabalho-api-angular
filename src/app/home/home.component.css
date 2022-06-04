@@ -1,0 +1,73 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  background-color: #202020;
+}
+
+.sidenav .mat-toolbar {
+  background: #202020;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header{
+  background-color: #202020;
+}
+
+
+.lista{
+  background-color: #202020;
+}
+
+.div-titulo{
+  margin: auto;
+  margin-top: 16px;
+}
+
+ #titulo{
+  text-decoration: none;
+  color: rgb(247, 240, 240);
+  font-size: 50px;
+  font-family: Impact, fantasy;
+  font-weight: 700;
+ }
+
+.links{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 700;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  padding: 15px 0;
+  color: #fff;
+  cursor: default;
+}
+
+#imagem-background{
+  background-repeat: no-repeat;
+  background-size:100%;
+  bottom: 0;
+  color: black;
+  left: 0;
+  overflow: auto;
+  padding: 3em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  background-size: cover;
+}

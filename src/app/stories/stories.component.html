@@ -1,0 +1,19 @@
+<div class="background" fxFlex fxLayout="column">
+  <div fxLayout="row wrap">
+    <div
+      fxFlex="25"
+      fxFlex.md="33"
+      fxFle.sm="50"
+      fxFlex.xs="100"
+      fxLayout="column"
+      *ngFor="let i of ListStories | async"
+      style="padding: 15px"
+    >
+      <mat-card>
+        <mat-card-title>
+          {{ i.title }}
+        </mat-card-title>
+      </mat-card>
+    </div>
+  </div>
+</div>

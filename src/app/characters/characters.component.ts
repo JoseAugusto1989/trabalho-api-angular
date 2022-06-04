@@ -1,24 +1,30 @@
-import { Component, OnInit } from '@angular/core';
 import { CharactersApiService } from './character/shared/characters-api.service';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-characters',
   templateUrl: './characters.component.html',
-  styleUrls: ['./characters.component.scss']
+  styleUrls: ['./characters.component.css']
 })
 export class CharactersComponent implements OnInit {
 
-  constructor(private characterSvc: CharactersApiService) { }
+  ListCharacters: Observable<any>
 
-  allCharacters: Observable<any> | undefined;
+  constructor(private characterService: CharactersApiService) { }
 
+  /* 
+  Será carregada a lista logo que a página for acessada
+   */
   ngOnInit(): void {
     this.getCharacters();
   }
 
+  /* 
+  Alimentando a variável ListCharacters que é uma lista de personagens, 
+  através do método getAllCharacters que se encontrada na apiservice
+   */
   getCharacters() {
-    this.allCharacters = this.characterSvc.getAllCharacters();
+    this.ListCharacters = this.characterService.getAllCharacters()
   }
-
 }
