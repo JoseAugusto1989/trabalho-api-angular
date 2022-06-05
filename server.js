@@ -1,14 +1,14 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-const PORT = process.env.PORT || 8080;
+const appName = "trabalho-api-angular";
 
-app.use(express.static(__dirname + '/dist/fa-marvel'));
+const outputPath = `${__dirname}/dist/${appName}`;
 
-app.get('/*', (req, res) => {
-    res.sendFile(__dirname + '/dist/fa-marvel/index.html');
-})
+app.use(express.static(outputPath));
 
-app.listen(PORT, () => {
-    console.log('serivdor iniciado na porta' + PORT);
-})
+app.get("/*", (req, res) => {
+  res.sendFile(`${outputPath}/index.html`);
+});
+
+app.listen(process.env.PORT);
